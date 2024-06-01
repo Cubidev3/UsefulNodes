@@ -44,7 +44,7 @@ signal minimized
 ## default cannot go below zero nor higher than max
 @export_range(0, 1000000) var default: int = 0:
 	set(value):
-		default = clampi(default, min, max)
+		default = clampi(value, min, max)
 		
 	get:
 		return default
