@@ -128,7 +128,7 @@ func get_size() -> int:
 func get_completion_percentage() -> float:
 	var size: int = get_size()
 	if size == 0: return 1.0
-	return (__current as float) / (size as float)
+	return ((__current - min) as float) / (size as float)
 
 
 ## Returns remaining percentage of counter.
